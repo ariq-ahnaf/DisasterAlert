@@ -1,0 +1,4 @@
+# ninja log v5
+0	75	0	src/gpsservice.o	b72768d0228940de
+3	307	0	src/geolocation_manager.o	d02c9b551d1ec8ef
+309	465	0	gpsservice	865e19c76fe397d3

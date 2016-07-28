@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="2.4" package="org.example.gpsservice" version="1.0.0">
+    <profile name="mobile" />
+    <service-application appid="org.example.gpsservice" exec="gpsservice" type="capp" multiple="false" taskmanage="false" nodisplay="true">
+        <label>gpsservice</label>
+    </service-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/location</privilege>
+    </privileges>
+    <feature name="http://tizen.org/feature/location">true</feature>
+    <feature name="http://tizen.org/feature/location.gps">true</feature>
+</manifest>
