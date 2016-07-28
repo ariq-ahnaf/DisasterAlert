@@ -1,0 +1,142 @@
+#include "edje_def.h"
+
+collections {
+	group {
+		name: GRP_MAIN;
+
+		images {
+			image: SATELLITE_ICON_FILE COMP;
+		}
+
+		parts {
+			part {
+				name: BG_PART;
+				type: RECT;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 1.0;
+					color: BG_COLOR_R BG_COLOR_G BG_COLOR_B BG_COLOR_A;
+				}
+			}
+
+			part {
+				name: INFORMATION_AREA_PART;
+				type: RECT;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: X_PADDING Y_PADDING;}
+					rel2 { relative: 1-X_PADDING INFO_AREA_PART_Y2_REL;}
+					color: INFO_AREAS_COLOR_R INFO_AREAS_COLOR_G INFO_AREAS_COLOR_B INFO_AREAS_COLOR_A;
+				}
+			}
+
+			part {
+				name: SATELLITE_PART;
+				type: SPACER;
+				mouse_events: 0;
+				description {
+					align: 0.0 0.5;
+					rel1 { relative: 0.0 0.0; to: INFORMATION_AREA_PART;}
+					rel2 { relative: SATELLITE_PART_X2_REL 1.0; to: INFORMATION_AREA_PART;}
+				}
+			}
+
+			part {
+				name: SATELLITE_ICON_PART;
+				type: IMAGE;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					align: 1.0 0.5;
+					rel1 { relative: 0.0 SATELLITE_ICON_PART_Y1_REL; to: SATELLITE_PART;}
+					rel2 { relative: SATELLITE_ICON_PART_X2_REL SATELLITE_ICON_PART_Y2_REL; to: SATELLITE_PART;}
+					image {
+						normal: SATELLITE_ICON_FILE;
+					}
+				}
+			}
+
+			part {
+				name: LAYOUT_PART_SATELLITE_TEXT;
+				type: TEXT;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.5;
+					rel1 { relative: SATELLITE_ICON_PART_X2_REL 0.0; to: SATELLITE_PART;}
+					rel2 { relative: 1.0 1.0; to: SATELLITE_PART;}
+					text { font: "Tizen:style=regular"; size: 40; min: 1 1; ellipsis: -1;}
+					color: TEXT_COLOR_R TEXT_COLOR_G TEXT_COLOR_B TEXT_COLOR_A;
+				}
+			}
+
+			part {
+				name: LAYOUT_PART_LONGITUDE_TEXT;
+				type: TEXT;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.5;
+					rel1 { relative: SATELLITE_PART_X2_REL 0.0; to: INFORMATION_AREA_PART;}
+					rel2 { relative: LONGITUDE_TEXT_PART_X2_REL 1.0; to: INFORMATION_AREA_PART;}
+					text { font: "Tizen:style=regular"; size: 26; min: 1 1; ellipsis: -1; align: 0.0 0.5;}
+					color: TEXT_COLOR_R TEXT_COLOR_G TEXT_COLOR_B TEXT_COLOR_A;
+				}
+			}
+
+			part {
+				name: LAYOUT_PART_LATITUDE_TEXT;
+				type: TEXT;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.5;
+					rel1 { relative: LONGITUDE_TEXT_PART_X2_REL 0.0; to: INFORMATION_AREA_PART;}
+					rel2 { relative: 1.0 1.0; to: INFORMATION_AREA_PART;}
+					text { font: "Tizen:style=regular"; size: 26; min: 1 1; ellipsis: -1; align: 0.0 0.5;}
+					color: TEXT_COLOR_R TEXT_COLOR_G TEXT_COLOR_B TEXT_COLOR_A;
+				}
+			}
+
+			part {
+				name: MESSAGE_AREA_PART;
+				type: RECT;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					rel1.relative: X_PADDING INFO_AREA_PART_Y2_REL+Y_PADDING;
+					rel2.relative: 1-X_PADDING MESSAGE_AREA_PART_Y2_REL;
+					color: INFO_AREAS_COLOR_R INFO_AREAS_COLOR_G INFO_AREAS_COLOR_B INFO_AREAS_COLOR_A;
+				}
+			}
+
+			part {
+				name: LAYOUT_PART_MESSAGE_TEXT;
+				type: TEXT;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					rel1 { relative: 2*X_PADDING 0.0; to: MESSAGE_AREA_PART;}
+					rel2 { relative: 1.0 1.0; to: MESSAGE_AREA_PART;}
+					text { font: "Tizen:style=regular"; size: 26; min: 1 1; ellipsis: -1; align: 0.0 0.5;}
+					color: TEXT_COLOR_R TEXT_COLOR_G TEXT_COLOR_B TEXT_COLOR_A;
+				}
+			}
+
+			part {
+				name: LAYOUT_PART_MAP_AREA;
+				type: SWALLOW;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					rel1.relative: X_PADDING MESSAGE_AREA_PART_Y2_REL+Y_PADDING;
+					rel2.relative: 1.0-X_PADDING 1.0-Y_PADDING;
+				}
+			}
+		}
+	}
+}

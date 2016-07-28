@@ -1,0 +1,7 @@
+# ninja log v5
+1	295	0	src/gpsservice-consumer.o	9b21847feca8da48
+4	309	0	src/view_manager.o	aa3e18f4d3caf9d8
+309	524	0	gpsservice-consumer	7c987b83a85681b3
+3	1034	0	res/edje/main.edj	11b5858d3633cf97
+3	285	0	src/gpsservice-consumer.o	9b21847feca8da48
+286	489	0	gpsservice-consumer	7c987b83a85681b3

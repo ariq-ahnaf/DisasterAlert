@@ -1,0 +1,4 @@
+# ninja log v5
+0	300	0	src/main.o	d50d6fd37ac34e69
+2	313	0	src/user_callbacks.o	e1e35490acdd596
+313	528	0	locationmanager	c8de47971c2208f8
