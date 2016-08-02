@@ -1,0 +1,10 @@
+# ninja log v5
+14	798	0	src/main.o	c0033490413d04ac
+286	802	0	src/view.o	1f66292dbdb74533
+285	803	0	src/data.o	761e238fb7a07f1b
+0	899	0	res/edje/main.edj	cf59a6eee87d994f
+803	1012	0	alarm	d2daa0a034b45f76
+3	1288	0	alarm	d2daa0a034b45f76
+5	2319	0	src/data.o	761e238fb7a07f1b
+2319	3604	0	alarm	d2daa0a034b45f76
+4	234	0	alarm	d2daa0a034b45f76
